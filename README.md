@@ -1,6 +1,9 @@
 # game-master-toolkit
 Tools for TTRPG Game Masters.
 
+[//]: # (TODO: How to set up repo for use only, vs how to set up for contribution.)
+[//]: # (TODO: What do I need in setup.py?)
+
 ## Install dependencies
 pipenv install --dev
 
