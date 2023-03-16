@@ -1,3 +1,5 @@
 from encounters import encounters
 
-print(encounters.sample_encounters())
+
+def root_interface():
+    print(encounters.sample_encounters())
