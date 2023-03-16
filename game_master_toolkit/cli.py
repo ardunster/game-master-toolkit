@@ -1,4 +1,4 @@
-from encounters import encounters
+# from encounters import encounters
 
 
 def root_interface():
@@ -14,7 +14,7 @@ def root_interface():
     print(" 3. [Q]uit")
     selection = input("> ")
     parse_selection(selection)
-    print(encounters.sample_encounters())
+    # print(encounters.sample_encounters())
 
 
 def parse_selection(selection):
