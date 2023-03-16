@@ -4,14 +4,24 @@ Tools for TTRPG Game Masters.
 [//]: # (TODO: How to set up repo for use only, vs how to set up for contribution.)
 [//]: # (TODO: What do I need in setup.py?)
 
-## Install dependencies
+## Running The Toolkit
+
+To run the entire toolkit, you need only run the package from the root directory of the repository:
+
+```bash
+game-master-toolkit % python3.9 game_master_toolkit
+```
+
+## Contributing
+
+### Install dependencies
 pipenv install --dev
 
-## Setup pre-commit and pre-push hooks
+### Setup pre-commit and pre-push hooks
 pipenv run pre-commit install -t pre-commit
 pipenv run pre-commit install -t pre-push
 
-## Development Practices
+### Development Practices
 
 This repository was created using Python 3.9.16, and using pipenv to manage packages. It uses Black and isort to standardize formatting and imports, and Flake8 for linting. The [Best Practices Tutorial on Sourcery](https://sourcery.ai/blog/python-best-practices/) was followed for the majority of basic setup.
 
