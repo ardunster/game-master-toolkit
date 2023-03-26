@@ -9,7 +9,7 @@ Tools for TTRPG Game Masters.
 To run the entire toolkit, you need only run the package from the root directory of the repository:
 
 ```bash
-game-master-toolkit % python3.9 game_master_toolkit
+game-master-toolkit % python3.9 -m game_master_toolkit
 ```
 
 ## Contributing

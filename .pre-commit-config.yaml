@@ -33,7 +33,7 @@ repos:
 
       - id: pytest
         name: pytest
-        stages: [commit]
+        stages: [commit, push]
         language: system
         entry: pipenv run pytest
         types: [python]
