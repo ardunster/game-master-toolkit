@@ -31,3 +31,15 @@ def test_parse_selection_encounters():
     assert cli.parse_selection("encount") == cli.LoadInterface.ENCOUNTERS
     assert cli.parse_selection("encounter") == cli.LoadInterface.ENCOUNTERS
     assert cli.parse_selection("encounters") == cli.LoadInterface.ENCOUNTERS
+
+
+def test_parse_selection_something_else():
+    assert cli.parse_selection("2") == cli.LoadInterface.SOMETHING_ELSE
+    assert cli.parse_selection(2) == cli.LoadInterface.SOMETHING_ELSE
+    assert cli.parse_selection("S") == cli.LoadInterface.SOMETHING_ELSE
+    assert cli.parse_selection("s") == cli.LoadInterface.SOMETHING_ELSE
+    assert cli.parse_selection("so") == cli.LoadInterface.SOMETHING_ELSE
+    assert cli.parse_selection("some") == cli.LoadInterface.SOMETHING_ELSE
+    assert cli.parse_selection("somethi") == cli.LoadInterface.SOMETHING_ELSE
+    assert cli.parse_selection("something") == cli.LoadInterface.SOMETHING_ELSE
+    assert cli.parse_selection("something else") == cli.LoadInterface.SOMETHING_ELSE
