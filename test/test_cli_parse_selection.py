@@ -21,3 +21,13 @@ def test_parse_selection_no_match():
     assert cli.parse_selection("salido") == cli.LoadInterface.ERROR
     assert cli.parse_selection(17) == cli.LoadInterface.ERROR
     assert cli.parse_selection("nyanyanyanya") == cli.LoadInterface.ERROR
+
+
+def test_parse_selection_quit():
+    assert cli.parse_selection("q") == cli.LoadInterface.QUIT
+    assert cli.parse_selection("quit") == cli.LoadInterface.QUIT
+    assert cli.parse_selection("exit") == cli.LoadInterface.QUIT
+    assert cli.parse_selection("EXIT") == cli.LoadInterface.QUIT
+    assert cli.parse_selection("QUIT") == cli.LoadInterface.QUIT
+    assert cli.parse_selection("Q") == cli.LoadInterface.QUIT
+    assert cli.parse_selection("x") == cli.LoadInterface.QUIT
