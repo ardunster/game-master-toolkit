@@ -1,5 +1,6 @@
-# from encounters import encounters
 from enum import Enum
+
+from game_master_toolkit.encounters import encounters_cli
 
 
 class LoadInterface(Enum):
@@ -35,13 +36,10 @@ def root_interface():
                 f"Sorry, {raw_selection} is not a recognized input. Please try again."
             )
         elif selection == LoadInterface.ENCOUNTERS:
-            print(
-                "You have selected the ENCOUNTERS tool. This tool is not yet implemented D: Sorry T_T"
-            )
+            print("You have selected the ENCOUNTERS tool.")
+            encounters_cli.enc_interface()
         elif selection == LoadInterface.SOMETHING_ELSE:
             print("Something else? Like what?  (what did you actually expect here?)")
-
-    # print(encounters.sample_encounters())
 
 
 def parse_selection(selection):

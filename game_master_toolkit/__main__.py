@@ -1,4 +1,4 @@
-from cli import root_interface
+from game_master_toolkit import cli
 
 if __name__ == "__main__":
-    root_interface()
+    cli.root_interface()
