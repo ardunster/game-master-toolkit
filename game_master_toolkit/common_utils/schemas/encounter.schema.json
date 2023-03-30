@@ -14,7 +14,8 @@
       },
       "frequency": {
         "description": "How common or uncommon the encounter should be",
-        "type": "string"
+        "type": "string",
+        "pattern": "(^common$)|(^uncommon$)|(^rare$)|(^very rare$)"
       },
       "quantity": {
         "description": "Either a direct quantity or a xdy die roll indication",
