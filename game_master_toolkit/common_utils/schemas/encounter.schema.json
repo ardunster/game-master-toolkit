@@ -18,10 +18,12 @@
       },
       "quantity": {
         "description": "Either a direct quantity or a xdy die roll indication",
-        "type": "string"
+        "type": "string",
+        "pattern": "^[0-9]+(d([1234568]|10|12|20))?$"
       }
     },
     "minItems": 1,
+    "uniqueItems": true,
     "required": [
       "name",
       "frequency",
