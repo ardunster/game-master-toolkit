@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.annardunster.com/gmtk/schemas/encounter.json",
+  "title": "Encounter",
+  "description": "Schema for encounter list files",
+  "type": "array",
+  "items": {
+    "description": "List of encounters to draw from",
+    "type": "object",
+    "properties": {
+      "name": {
+        "description": "Name of the monster or other encounter",
+        "type": "string"
+      },
+      "frequency": {
+        "description": "How common or uncommon the encounter should be",
+        "type": "string"
+      },
+      "quantity": {
+        "description": "Either a direct quantity or a xdy die roll indication",
+        "type": "string"
+      }
+    },
+    "minItems": 1,
+    "required": [
+      "name",
+      "frequency",
+      "quantity"
+    ]
+  }
+}
+

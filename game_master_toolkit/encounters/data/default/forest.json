@@ -1,10 +1,12 @@
-{
-  "gnoll": {
+[
+  {
+    "name": "gnoll",
     "frequency": "uncommon",
     "quantity": "2d6"
   },
-  "centaur": {
+  {
+    "name": "centaur",
     "frequency": "uncommon",
     "quantity": "2d6"
   }
-}
+]
