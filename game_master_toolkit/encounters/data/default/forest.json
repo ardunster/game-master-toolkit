@@ -1,0 +1,10 @@
+{
+  "gnoll": {
+    "frequency": "uncommon",
+    "quantity": "2d6"
+  },
+  "centaur": {
+    "frequency": "uncommon",
+    "quantity": "2d6"
+  }
+}

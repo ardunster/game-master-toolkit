@@ -1,0 +1,10 @@
+{
+  "goblin": {
+    "frequency": "common",
+    "quantity": "2d4"
+  },
+  "roper": {
+    "frequency": "rare",
+    "quantity": "1"
+  }
+}
