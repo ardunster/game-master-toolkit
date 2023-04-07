@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://www.annardunster.com/gmtk/schemas/encounter.json",
-  "title": "Encounter",
+  "title": "Encounters",
   "description": "Schema for encounter list files",
   "type": "array",
   "items": {
@@ -24,7 +24,7 @@
       "quantity": {
         "description": "Either a direct quantity or a xdy die roll indication",
         "type": "string",
-        "pattern": "^[0-9]+(d([1234568]|10|12|20))?$"
+        "pattern": "^[0-9]+(d([1234568]|10|12|20|100))?$"
       }
     },
     "minItems": 1,
