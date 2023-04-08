@@ -79,23 +79,17 @@ class TestJsonParser:
         with pytest.raises(ValidationError):
             parser.read_files([biome])
 
-    # TODO: write this test correctly for expected validation failure output
-    @pytest.mark.xfail(reason="Incorrect test implementation, TODO")
-    def test_read_files_with_invalid_tool(mock_file_system):
+    def test_read_files_with_invalid_tool(self, mock_file_system):
         parser = JsonParser("invalid_tool", "default", mock_file_system)
         with pytest.raises(FileNotFoundError):
             parser.read_files(["dungeon"])
 
-    # TODO: write this test correctly for expected validation failure output
-    @pytest.mark.xfail(reason="Incorrect test implementation, TODO")
-    def test_read_files_with_invalid_dataset(mock_file_system):
+    def test_read_files_with_invalid_dataset(self, mock_file_system):
         parser = JsonParser("encounters", "invalid_dataset", mock_file_system)
         with pytest.raises(FileNotFoundError):
             parser.read_files(["dungeon"])
 
-    # TODO: write this test correctly for expected  failure output
-    @pytest.mark.xfail(reason="Incorrect test implementation, TODO")
-    def test_read_files_with_invalid_filename(mock_file_system):
+    def test_read_files_with_invalid_filename(self, mock_file_system):
         parser = JsonParser("encounters", "default", mock_file_system)
         with pytest.raises(FileNotFoundError):
             parser.read_files(["invalid_filename"])
