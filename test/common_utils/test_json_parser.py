@@ -3,6 +3,7 @@ import shutil
 from pathlib import Path
 
 import pytest
+from jsonschema.exceptions import ValidationError
 
 from game_master_toolkit.common_utils.json_parser import JsonParser
 
@@ -68,24 +69,15 @@ class TestJsonParser:
             {"name": "centaur", "frequency": "uncommon", "quantity": "2d6"},
         ]
 
-    # TODO: write this test correctly for expected validation failure output
-    @pytest.mark.xfail(reason="Incorrect test implementation, TODO")
     def test_json_parser_schema_failure(self, mock_file_system):
         parser = JsonParser("encounters", "default", mock_file_system)
         biome = "fail1"
-        data = parser.read_files([biome])
-        assert len(data) == 1
-        assert data[biome] == [
-            {"name": "gnoll", "frequency": "uncommon", "quantity": "2d6"},
-            {"name": "centaur", "frequency": "uncommon", "quantity": "2d6"},
-        ]
+        with pytest.raises(ValidationError):
+            parser.read_files([biome])
+
         biome = "fail2"
-        data = parser.read_files([biome])
-        assert len(data) == 1
-        assert data[biome] == [
-            {"name": "gnoll", "frequency": "uncommon", "quantity": "2d6"},
-            {"name": "centaur", "frequency": "uncommon", "quantity": "2d6"},
-        ]
+        with pytest.raises(ValidationError):
+            parser.read_files([biome])
 
     # TODO: write this test correctly for expected validation failure output
     @pytest.mark.xfail(reason="Incorrect test implementation, TODO")
