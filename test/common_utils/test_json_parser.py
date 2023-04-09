@@ -93,6 +93,3 @@ class TestJsonParser:
         parser = JsonParser("encounters", "default", mock_file_system)
         with pytest.raises(FileNotFoundError):
             parser.read_files(["invalid_filename"])
-
-    def test_json_parser_constructor_params(self):
-        pass
