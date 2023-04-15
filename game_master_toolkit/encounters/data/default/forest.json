@@ -1,11 +1,192 @@
 [
   {
-    "name": "gnoll",
+    "name": "Gnoll",
     "frequency": "uncommon",
     "quantity": "2d6"
   },
   {
-    "name": "centaur",
+    "name": "Centaur",
+    "frequency": "uncommon",
+    "quantity": "2d6",
+    "description": "A small herd of centaurs canters into view, clearly dressed as a scouting party."
+  },
+  {
+    "name": "Goblin raiding party",
+    "frequency": "common",
+    "quantity": "2d4",
+    "description": "A group of goblins armed with makeshift weapons ambushes the party."
+  },
+  {
+    "name": "Dire wolf pack",
+    "frequency": "uncommon",
+    "quantity": "1d4+1",
+    "description": "A pack of dire wolves attacks the party, looking for their next meal."
+  },
+  {
+    "name": "Troll under the bridge",
+    "frequency": "rare",
+    "quantity": "1",
+    "description": "A troll lairs beneath a bridge the party must cross, demanding a toll or a fight."
+  },
+  {
+    "name": "Ogre foraging",
+    "frequency": "common",
+    "quantity": "1",
+    "description": "An ogre is foraging for food and takes offense at the party's presence."
+  },
+  {
+    "name": "Siren song",
+    "frequency": "uncommon",
+    "quantity": "1",
+    "description": "A siren's song can be heard from the nearby lake, luring the party to their doom."
+  },
+  {
+    "name": "Gnoll hunting party",
+    "frequency": "common",
+    "quantity": "1d6+1",
+    "description": "A group of gnolls is out hunting and mistakes the party for prey."
+  },
+  {
+    "name": "Giant spider lair",
+    "frequency": "rare",
+    "quantity": "1",
+    "description": "A giant spider has made its lair in the forest and attacks the party when disturbed."
+  },
+  {
+    "name": "Barghest pack",
+    "frequency": "very rare",
+    "quantity": "1d4+1",
+    "description": "A pack of barghests hunts in the forest, seeking to feast on the souls of the living."
+  },
+  {
+    "name": "Animated trees",
+    "frequency": "rare",
+    "quantity": "2d2",
+    "description": "A grove of trees has been animated by a malevolent spirit and attacks the party."
+  },
+  {
+    "name": "Bandit ambush",
+    "frequency": "common",
+    "quantity": "2d6",
+    "description": "A group of bandits waits in ambush, looking to rob travelers passing through the forest."
+  },
+  {
+    "name": "Goblin ambush",
+    "frequency": "common",
+    "quantity": "2d6"
+  },
+  {
+    "name": "Bear",
+    "frequency": "common",
+    "quantity": "1"
+  },
+  {
+    "name": "Merchant caravan",
+    "frequency": "common",
+    "quantity": "1"
+  },
+  {
+    "name": "Elven patrol",
+    "frequency": "uncommon",
+    "quantity": "1"
+  },
+  {
+    "name": "Druidic grove",
+    "frequency": "rare",
+    "quantity": "1"
+  },
+  {
+    "name": "Mysterious tree with markings",
+    "frequency": "uncommon",
+    "quantity": "1"
+  },
+  {
+    "name": "Swarm of bats",
+    "frequency": "rare",
+    "quantity": "1"
+  },
+  {
+    "name": "Treant guardian",
+    "frequency": "rare",
+    "quantity": "1"
+  },
+  {
+    "name": "Frost giant scouting party",
+    "frequency": "very rare",
+    "quantity": "1"
+  },
+  {
+    "name": "Mysterious crystal formation",
+    "frequency": "rare",
+    "quantity": "1"
+  },
+  {
+    "name": "Coven of hags",
+    "frequency": "rare",
+    "quantity": "1"
+  },
+  {
+    "name": "Entangled deer",
+    "frequency": "uncommon",
+    "quantity": "1"
+  },
+  {
+    "name": "Ruined temple",
+    "frequency": "rare",
+    "quantity": "1"
+  },
+  {
+    "name": "Gnome tinkerer camp",
+    "frequency": "uncommon",
+    "quantity": "1"
+  },
+  {
+    "name": "Bandit hideout",
+    "frequency": "common",
+    "quantity": "1"
+  },
+  {
+    "name": "Fey crossing",
+    "frequency": "rare",
+    "quantity": "1"
+  },
+  {
+    "name": "Strange ruins with glowing glyphs",
+    "frequency": "rare",
+    "quantity": "1"
+  },
+  {
+    "name": "Ghostly apparitions of deceased travelers",
+    "frequency": "very rare",
+    "quantity": "1"
+  },
+  {
+    "name": "Treasure map hidden in tree",
+    "frequency": "rare",
+    "quantity": "1"
+  },
+  {
+    "name": "Druidic rite site",
+    "frequency": "uncommon",
+    "quantity": "1"
+  },
+  {
+    "name": "Giant spider nest",
+    "frequency": "uncommon",
+    "quantity": "2d4"
+  },
+  {
+    "name": "Forbidden fairy ring",
+    "frequency": "rare",
+    "quantity": "1"
+  },
+  {
+    "name": "Giant bear cave",
+    "frequency": "rare",
+    "quantity": "1"
+  },
+  {
+    "name": "Restless undead",
     "frequency": "uncommon",
     "quantity": "2d6"
   }
