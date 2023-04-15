@@ -1,5 +1,5 @@
 [run]
-source = game-master-toolkit
+source = game_master_toolkit
 
 [report]
 exclude_lines =
