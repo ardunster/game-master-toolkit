@@ -1,3 +1,5 @@
+import pytest
+
 from game_master_toolkit.common_utils.dice import Dice, Roll
 
 
@@ -21,8 +23,20 @@ def test_die_roll_number_only():
     assert roll_27.modifier == 0
 
 
-def test_die_roll_with_die(mocker):
-    mock_rolls = [3, 4, 5]
-    mocker.patch("random.randint", return_values=mock_rolls)
-    # assert roll("3d6") == {"rolls": mock_rolls, "total": 11}
-    pass
+@pytest.mark.parametrize(
+    "input_dice,expected_dice,mock_rolls,expected_total",
+    [
+        pytest.param("3d6", Dice(3, 6, 0), [3, 4, 5], 12),
+        pytest.param("2d4", Dice(2, 4, 0), [2, 4], 6),
+        pytest.param("5d20", Dice(5, 20, 0), [1, 2, 3, 5, 8], 19),
+    ],
+)
+def test_die_roll_with_die(
+    mocker, input_dice: str, expected_dice: Dice, mock_rolls, expected_total
+):
+    mocker.patch("random.choice", side_effect=mock_rolls)
+    roll = Roll(input_dice)
+    assert roll._dice == expected_dice
+    assert roll.rolls == mock_rolls
+    assert roll.total == expected_total
+    assert roll.modifier == expected_dice.modifier

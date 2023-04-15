@@ -1,3 +1,4 @@
+import random
 import re
 from dataclasses import dataclass
 
@@ -33,8 +34,18 @@ class Dice:
 
 
 class Roll:
+    # TODO: Make this take a Dice as an argument too
     def __init__(self, dice: str):
         self._dice = split_dice(dice)
-        self.rolls = [self._dice.quantity]
-        self.total = self._dice.quantity
         self.modifier = self._dice.modifier
+        self.rolls = []
+        self.total = self.roll()
+
+    def roll(self):
+        self.rolls = []
+        if self._dice.die == 1:
+            self.rolls.append(self._dice.quantity)
+        else:
+            for roll in range(self._dice.quantity):
+                self.rolls.append(random.choice(range(1, self._dice.die)))
+        return sum(self.rolls)
