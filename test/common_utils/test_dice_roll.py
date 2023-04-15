@@ -1,5 +1,3 @@
-from pytest_mock import mocker
-
 from game_master_toolkit.common_utils.dice import Roll
 
 
@@ -20,8 +18,8 @@ def test_die_roll_number_only():
     assert roll_27.modifier is None
 
 
-def test_die_roll_with_die():
+def test_die_roll_with_die(mocker):
     mock_rolls = [3, 4, 5]
-    # mocker.patch("random.randint", return_values=mock_rolls)
+    mocker.patch("random.randint", return_values=mock_rolls)
     # assert roll("3d6") == {"rolls": mock_rolls, "total": 11}
     pass
