@@ -36,6 +36,7 @@ def test_success():
             "quantity": "1d4+1",
             "description": "A pack of dire wolves attacks the party, looking for their next meal.",
         },
+        {"name": "steve", "frequency": "very rare", "quantity": "45d20-100"},
     ]
     try:
         validate(instance=dungeon_json, schema=schema)
@@ -72,3 +73,10 @@ def test_fails_invalid_value():
 
     with pytest.raises(ValidationError):
         validate(instance=fail_invalid_value, schema=schema)
+
+    fail_invalid_regex = [
+        {"name": "steve", "frequency": "very rare", "quantity": "45D20-100"},
+    ]
+
+    with pytest.raises(ValidationError):
+        validate(instance=fail_invalid_regex, schema=schema)

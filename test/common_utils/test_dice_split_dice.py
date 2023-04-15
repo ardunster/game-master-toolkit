@@ -17,6 +17,14 @@ def test_split_with_dice():
     assert split_dice("12d4") == Dice(12, 4, 0)
 
 
+def test_split_with_modifier():
+    assert split_dice("1d1+7") == Dice(1, 1, 7)
+    assert split_dice("1D6+1") == Dice(1, 6, 1)
+    assert split_dice("4d10+3") == Dice(4, 10, 3)
+    assert split_dice("7D8+405") == Dice(7, 8, 405)
+    assert split_dice("12d4-2") == Dice(12, 4, -2)
+
+
 def test_split_fails_bad_input():
     with pytest.raises(AssertionError):
         split_dice("steve")
