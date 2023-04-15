@@ -8,5 +8,194 @@
     "name": "roper",
     "frequency": "rare",
     "quantity": "1"
+  },
+  {
+    "name": "Goblin scouting party",
+    "description": "A group of goblins with crude weapons, sent to scout ahead for a larger force.",
+    "frequency": "common",
+    "quantity": "2d4"
+  },
+  {
+    "name": "Crumbled ruins",
+    "description": "A section of the dungeon that has caved in or been destroyed. There may be hidden treasures to find, or dangerous areas to navigate.",
+    "frequency": "uncommon",
+    "quantity": "1"
+  },
+  {
+    "name": "Chasm crossing",
+    "description": "A deep chasm that blocks the party's path.",
+    "frequency": "uncommon",
+    "quantity": "1"
+  },
+  {
+    "name": "Dwarven treasure trove",
+    "description": "A hidden cache of treasure left behind by dwarves. It could be guarded, or there may be traps to avoid.",
+    "frequency": "rare",
+    "quantity": "1"
+  },
+  {
+    "name": "Orc ambush",
+    "description": "A group of orcs lying in wait to attack the party.",
+    "frequency": "common",
+    "quantity": "2d6"
+  },
+  {
+    "name": "Strange fungus",
+    "description": "A type of glowing fungus that grows in the dungeon. It could have healing properties, or it could be poisonous.",
+    "frequency": "uncommon",
+    "quantity": "1"
+  },
+  {
+    "name": "Rat infestation",
+    "description": "A swarm of rats that have taken up residence in the dungeon. They could be a minor nuisance, or they could lead the party to hidden areas.",
+    "frequency": "common",
+    "quantity": "3d6"
+  },
+  {
+    "name": "Mysterious portal",
+    "description": "A portal that leads to another realm. It could be guarded, or it could transport the party to a dangerous location.",
+    "frequency": "rare",
+    "quantity": "1"
+  },
+  {
+    "name": "Enchanted pool",
+    "description": "A pool of water with magical properties. It could heal or harm those who drink from it.",
+    "frequency": "uncommon",
+    "quantity": "1"
+  },
+  {
+    "name": "Giant spider nest",
+    "description": "A nest of giant spiders that have made the dungeon their home. They could be fought, or the party could try to sneak past.",
+    "frequency": "uncommon",
+    "quantity": "1d4+1"
+  },
+  {
+    "name": "Abandoned workshop",
+    "description": "A workshop that was once used by craftsmen. It could have tools and materials that could be useful to the party.",
+    "frequency": "uncommon",
+    "quantity": "1"
+  },
+  {
+    "name": "Undead horde",
+    "description": "A horde of undead creatures that have been raised by a powerful necromancer.",
+    "frequency": "rare",
+    "quantity": "2d10"
+  },
+  {
+    "name": "Friendly merchant",
+    "frequency": "common",
+    "quantity": "1",
+    "description": "A friendly merchant with a cart of goods for sale"
+  },
+  {
+    "name": "Ancient statue",
+    "frequency": "uncommon",
+    "quantity": "1",
+    "description": "A beautifully crafted statue of an unknown deity"
+  },
+  {
+    "name": "Giant spider",
+    "frequency": "common",
+    "quantity": "1d4",
+    "description": "Large spiders lurk in the shadows"
+  },
+  {
+    "name": "Mysterious runes",
+    "frequency": "uncommon",
+    "quantity": "1",
+    "description": "Intricate runes etched into the dungeon walls"
+  },
+  {
+    "name": "Goblin ambush",
+    "frequency": "common",
+    "quantity": "2d4",
+    "description": "A group of goblins waiting to ambush unsuspecting adventurers"
+  },
+  {
+    "name": "Collapsed tunnel",
+    "frequency": "uncommon",
+    "quantity": "1",
+    "description": "A tunnel that has caved in, blocking the path forward"
+  },
+  {
+    "name": "Giant rat",
+    "frequency": "common",
+    "quantity": "1d6"
+  },
+  {
+    "name": "Mysterious door",
+    "frequency": "rare",
+    "quantity": "1",
+    "description": "A strange door with mysterious symbols etched into it"
+  },
+  {
+    "name": "Skeletons",
+    "frequency": "uncommon",
+    "quantity": "1d4"
+  },
+  {
+    "name": "Friendly ghost",
+    "frequency": "rare",
+    "quantity": "1",
+    "description": "A friendly ghost of a long-dead adventurer"
+  },
+  {
+    "name": "Goblin Ambush",
+    "frequency": "uncommon",
+    "quantity": "2d4+2",
+    "description": "A group of goblins lying in wait for unsuspecting adventurers"
+  },
+  {
+    "name": "Orc Patrol",
+    "frequency": "common",
+    "quantity": "1d6+2",
+    "description": "A band of orcs out on patrol, looking for intruders in their territory"
+  },
+  {
+    "name": "Giant Spider Nest",
+    "frequency": "rare",
+    "quantity": "1d4",
+    "description": "A nest of giant spiders guarding their young"
+  },
+  {
+    "name": "Mimic Chest",
+    "frequency": "very rare",
+    "quantity": "1",
+    "description": "A chest that is actually a shapeshifting mimic, waiting to attack unsuspecting treasure hunters"
+  },
+  {
+    "name": "Specter Haunt",
+    "frequency": "rare",
+    "quantity": "1",
+    "description": "A specter that haunts the dungeon, seeking vengeance against the living"
+  },
+  {
+    "name": "Skeleton Warriors",
+    "frequency": "common",
+    "quantity": "2d6+3",
+    "description": "A group of undead warriors, still guarding their long-forgotten stronghold"
+  },
+  {
+    "name": "Giant Centipede Swarm",
+    "frequency": "uncommon",
+    "quantity": "4d4",
+    "description": "A swarm of giant centipedes, crawling out of the walls and floor to attack the party"
+  },
+  {
+    "name": "Ghoul Pack",
+    "frequency": "rare",
+    "quantity": "2d4",
+    "description": "A pack of ghouls, hunting for fresh flesh to feast upon"
+  },
+  {
+    "name": "Trolls",
+    "frequency": "very rare",
+    "quantity": "1d5"
+  },
+  {
+    "name": "Giant Rat Infestation",
+    "frequency": "common",
+    "quantity": "3d6",
+    "description": "A horde of giant rats, crawling out of the shadows and swarming the party"
   }
 ]
