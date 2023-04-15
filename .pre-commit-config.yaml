@@ -3,40 +3,32 @@ repos:
     hooks:
       - id: isort
         name: isort
-        stages: [commit]
+        stages: [ commit ]
         language: system
         entry: pipenv run isort
-        types: [python]
+        types: [ python ]
 
       - id: black
         name: black
-        stages: [commit]
+        stages: [ commit ]
         language: system
         entry: pipenv run black
-        types: [python]
+        types: [ python ]
 
       - id: flake8
         name: flake8
-        stages: [commit]
+        stages: [ commit ]
         language: system
         entry: pipenv run flake8
-        types: [python]
+        types: [ python ]
         exclude: setup.py
-
-#      - id: mypy
-#        name: mypy
-#        stages: [commit]
-#        language: system
-#        entry: pipenv run mypy
-#        types: [python]
-#        pass_filenames: false
 
       - id: pytest
         name: pytest
-        stages: [commit, push]
+        stages: [ push ]
         language: system
         entry: pipenv run pytest
-        types: [python]
+        types: [ python ]
 
 #      - id: pytest-cov
 #        name: pytest
