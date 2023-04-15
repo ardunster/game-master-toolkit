@@ -2,7 +2,12 @@ from dataclasses import dataclass
 
 
 def split_dice(dice: str):
-    return Dice(int(dice), 1, 0)
+    split_d = dice.split("d")
+    if len(split_d) > 1:
+        quantity = int(split_d[1])
+    else:
+        quantity = 1
+    return Dice(int(split_d[0]), quantity, 0)
 
 
 @dataclass
