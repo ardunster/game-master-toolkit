@@ -1,6 +1,6 @@
 import pytest
 
-from game_master_toolkit.common_utils.dice import Dice, split_dice
+from game_master_toolkit.common_utils.dice import Dice, InvalidDiceError, split_dice
 
 
 def test_split_dice_number_only():
@@ -26,9 +26,9 @@ def test_split_with_modifier():
 
 
 def test_split_fails_bad_input():
-    with pytest.raises(AssertionError):
+    with pytest.raises(InvalidDiceError):
         split_dice("steve")
-    with pytest.raises(AssertionError):
+    with pytest.raises(InvalidDiceError):
         split_dice("some random string")
-    with pytest.raises(AssertionError):
+    with pytest.raises(InvalidDiceError):
         split_dice("1+3")

@@ -5,10 +5,19 @@ from dataclasses import dataclass
 from game_master_toolkit.common_utils.regex_constants import dice_notation
 
 
-def split_dice(dice: str):
-    dice = dice.lower()
-    assert dice_notation.match(dice) is not None
-    split_d = dice.split("d")
+class InvalidDiceError(Exception):
+    pass
+
+
+def split_dice(dice_str: str):
+    dice_str = dice_str.lower()
+    if not dice_notation.match(dice_str):
+        raise InvalidDiceError(
+            f"Invalid Dice string: {dice_str}. Accepted values include numbers, "
+            f"such as '1', rolls such as '2d4', and rolls with modifier such as "
+            f"'3d6+1'."
+        )
+    split_d = dice_str.split("d")
     if len(split_d) == 1:
         quantity = int(split_d[0])
         die = 1
