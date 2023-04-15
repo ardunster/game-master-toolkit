@@ -34,7 +34,7 @@ class Dice:
 
 class Roll:
     def __init__(self, dice: str):
-        self.dice = dice
-        self.rolls = [int(dice)]
-        self.total = int(dice)
-        self.modifier = None
+        self._dice = split_dice(dice)
+        self.rolls = [self._dice.quantity]
+        self.total = self._dice.quantity
+        self.modifier = self._dice.modifier
