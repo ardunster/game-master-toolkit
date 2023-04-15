@@ -9,6 +9,21 @@ from game_master_toolkit.common_utils.json_parser import JsonParser
 
 
 class TestJsonParser:
+    dungeon_json = [
+        {"name": "goblin", "frequency": "common", "quantity": "2d4"},
+        {"name": "roper", "frequency": "rare", "quantity": "1"},
+    ]
+    forest_json = [
+        {"name": "gnoll", "frequency": "uncommon", "quantity": "2d6"},
+        {
+            "name": "centaur",
+            "frequency": "uncommon",
+            "quantity": "2d6",
+            "description": "A small herd of centaurs canters into view, "
+            "clearly dressed as a scouting party.",
+        },
+    ]
+
     @pytest.fixture
     def mock_file_system(self, tmp_path):
         gmtk_dir = tmp_path / "game_master_toolkit"
@@ -17,22 +32,8 @@ class TestJsonParser:
         data_dir.mkdir(parents=True, exist_ok=True)
         schema_dir = gmtk_dir / "common_utils" / "schemas"
         schema_dir.mkdir(parents=True, exist_ok=True)
-        (data_dir / "dungeon.json").write_text(
-            json.dumps(
-                [
-                    {"name": "goblin", "frequency": "common", "quantity": "2d4"},
-                    {"name": "roper", "frequency": "rare", "quantity": "1"},
-                ]
-            )
-        )
-        (data_dir / "forest.json").write_text(
-            json.dumps(
-                [
-                    {"name": "gnoll", "frequency": "uncommon", "quantity": "2d6"},
-                    {"name": "centaur", "frequency": "uncommon", "quantity": "2d6"},
-                ]
-            )
-        )
+        (data_dir / "dungeon.json").write_text(json.dumps(self.dungeon_json))
+        (data_dir / "forest.json").write_text(json.dumps(self.forest_json))
         (data_dir / "fail1.json").write_text(
             json.dumps(
                 [
@@ -57,17 +58,11 @@ class TestJsonParser:
         parser = JsonParser("encounters", "default", mock_file_system)
         data = parser.read_files([biome])
         assert len(data) == 1
-        assert data[biome] == [
-            {"name": "goblin", "frequency": "common", "quantity": "2d4"},
-            {"name": "roper", "frequency": "rare", "quantity": "1"},
-        ]
+        assert data[biome] == self.dungeon_json
         biome = "forest"
         data = parser.read_files([biome])
         assert len(data) == 1
-        assert data[biome] == [
-            {"name": "gnoll", "frequency": "uncommon", "quantity": "2d6"},
-            {"name": "centaur", "frequency": "uncommon", "quantity": "2d6"},
-        ]
+        assert data[biome] == self.forest_json
 
     def test_json_parser_schema_failure(self, mock_file_system):
         parser = JsonParser("encounters", "default", mock_file_system)
