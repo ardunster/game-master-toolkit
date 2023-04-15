@@ -30,6 +30,12 @@ def test_success():
             "description": "A small herd of centaurs canters into view, "
             "clearly dressed as a scouting party.",
         },
+        {
+            "name": "Dire wolf pack",
+            "frequency": "uncommon",
+            "quantity": "1d4+1",
+            "description": "A pack of dire wolves attacks the party, looking for their next meal.",
+        },
     ]
     try:
         validate(instance=dungeon_json, schema=schema)

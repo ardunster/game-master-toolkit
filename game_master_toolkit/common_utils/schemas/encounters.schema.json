@@ -24,7 +24,7 @@
       "quantity": {
         "description": "Either a direct quantity or a xdy die roll indication",
         "type": "string",
-        "pattern": "^[0-9]+(d([1234568]|10|12|20|100))?$"
+        "pattern": "^[0-9]+(d([1234568]|10|12|20|100))?(\\+[0-9]+)?$"
       },
       "description": {
         "description": "A short description of the encounter. Optional.",
