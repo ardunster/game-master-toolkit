@@ -29,6 +29,8 @@ def test_die_roll_number_only():
         pytest.param("3d6", Dice(3, 6, 0), [3, 4, 5], 12),
         pytest.param("2d4", Dice(2, 4, 0), [2, 4], 6),
         pytest.param("5d20", Dice(5, 20, 0), [1, 2, 3, 5, 8], 19),
+        pytest.param("1d10+1", Dice(1, 10, 1), [8], 9),
+        pytest.param("3d8-2", Dice(3, 8, -2), [8, 4, 4], 14),
     ],
 )
 def test_die_roll_with_die(

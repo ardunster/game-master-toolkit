@@ -48,4 +48,4 @@ class Roll:
         else:
             for roll in range(self._dice.quantity):
                 self.rolls.append(random.choice(range(1, self._dice.die)))
-        return sum(self.rolls)
+        return sum(self.rolls) + self.modifier
