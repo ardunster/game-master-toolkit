@@ -1,6 +1,7 @@
 import random
 import re
 from dataclasses import dataclass
+from typing import Union
 
 from game_master_toolkit.common_utils.regex_constants import dice_notation
 
@@ -43,18 +44,22 @@ class Dice:
 
 
 class Roll:
-    # TODO: Make this take a Dice as an argument too
-    def __init__(self, dice: str):
-        self._dice = split_dice(dice)
-        self.modifier = self._dice.modifier
+    def __init__(self, dice: Union[str, Dice]):
+        if isinstance(dice, Dice):
+            self.dice = dice
+        elif isinstance(dice, str):
+            self.dice = split_dice(dice)
+        else:
+            raise InvalidDiceError()
+        self.modifier = self.dice.modifier
         self.rolls = []
         self.total = self.roll()
 
     def roll(self):
         self.rolls = []
-        if self._dice.die == 1:
-            self.rolls.append(self._dice.quantity)
+        if self.dice.die == 1:
+            self.rolls.append(self.dice.quantity)
         else:
-            for roll in range(self._dice.quantity):
-                self.rolls.append(random.choice(range(1, self._dice.die)))
+            for roll in range(self.dice.quantity):
+                self.rolls.append(random.choice(range(1, self.dice.die)))
         return sum(self.rolls) + self.modifier
