@@ -28,13 +28,13 @@ class TestJsonParser:
     def mock_file_system(self, tmp_path):
         gmtk_dir = tmp_path / "game_master_toolkit"
         gmtk_dir.mkdir(parents=True)
-        data_dir = gmtk_dir / "encounters" / "data" / "default"
+        data_dir = gmtk_dir / "encounters" / "data"
         data_dir.mkdir(parents=True, exist_ok=True)
-        schema_dir = gmtk_dir / "common_utils" / "schemas"
-        schema_dir.mkdir(parents=True, exist_ok=True)
-        (data_dir / "dungeon.json").write_text(json.dumps(self.dungeon_json))
-        (data_dir / "forest.json").write_text(json.dumps(self.forest_json))
-        (data_dir / "fail1.json").write_text(
+        default_data_dir = data_dir / "default"
+        default_data_dir.mkdir(parents=True, exist_ok=True)
+        (default_data_dir / "dungeon.json").write_text(json.dumps(self.dungeon_json))
+        (default_data_dir / "forest.json").write_text(json.dumps(self.forest_json))
+        (default_data_dir / "fail1.json").write_text(
             json.dumps(
                 [
                     {"steve": "gnoll", "frequency": "uncommon", "quantity": "2d6"},
@@ -42,15 +42,15 @@ class TestJsonParser:
                 ]
             )
         )
-        (data_dir / "fail2.json").write_text(
+        (default_data_dir / "fail2.json").write_text(
             json.dumps(
                 {"name": "centaur", "frequency": "uncommon", "quantity": "2d6"},
             )
         )
         actual_path_of_encounters_schema = Path(
-            "./game_master_toolkit/common_utils/schemas/encounters.schema.json"
+            "./game_master_toolkit/encounters/data/encounters.schema.json"
         )
-        shutil.copy(actual_path_of_encounters_schema, schema_dir)
+        shutil.copy(actual_path_of_encounters_schema, data_dir)
         yield tmp_path
 
     def test_json_parser(self, mock_file_system):

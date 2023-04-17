@@ -8,8 +8,9 @@ from jsonschema.exceptions import ValidationError
 schema_path = Path(
     Path.cwd()
     / "game_master_toolkit"
-    / "common_utils"
-    / "schemas/encounters.schema.json"
+    / "encounters"
+    / "data"
+    / "encounters.schema.json"
 )
 
 with schema_path.open() as f:
