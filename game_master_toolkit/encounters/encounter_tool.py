@@ -3,6 +3,7 @@ from pathlib import Path
 from typing import Literal, Optional
 
 from game_master_toolkit.common_utils.dice import Dice
+from game_master_toolkit.common_utils.json_parser import JsonParser
 
 
 @dataclass
@@ -14,6 +15,6 @@ class EncounterEntry:
 
 
 class EncounterTool:
-    def __init__(self, dataset, filesystem: Path):
+    def __init__(self, filesystem: Path, dataset="default"):
         self.dataset = dataset
-        self.filesystem = filesystem
+        json_parser = JsonParser("encounters", self.dataset, filesystem)
