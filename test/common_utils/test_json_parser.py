@@ -58,11 +58,16 @@ class TestJsonParser:
         parser = JsonParser("encounters", "default", mock_file_system)
         data = parser.read_files([biome])
         assert len(data) == 1
-        assert data[biome] == self.dungeon_json
+        assert data[0][biome] == self.dungeon_json
         biome = "forest"
         data = parser.read_files([biome])
         assert len(data) == 1
-        assert data[biome] == self.forest_json
+        assert data[0][biome] == self.forest_json
+        biomes = ["forest", "dungeon"]
+        data = parser.read_files(biomes)
+        assert len(data) == 2
+        assert data[0][biomes[0]] == self.forest_json
+        assert data[1][biomes[1]] == self.dungeon_json
 
     def test_json_parser_schema_failure(self, mock_file_system):
         parser = JsonParser("encounters", "default", mock_file_system)

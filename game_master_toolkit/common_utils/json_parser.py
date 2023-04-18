@@ -11,7 +11,7 @@ class JsonParser:
         self.filesystem = filesystem
 
     def read_files(self, filenames: list[str]):
-        data = {}
+        data = []
         data_path = self.filesystem / "game_master_toolkit" / self.tool / "data"
         schema_filename = f"{self.tool}.schema.json"
         schema_path = data_path / f"{schema_filename}"
@@ -22,5 +22,5 @@ class JsonParser:
             with file_path.open() as f:
                 file_data = json.load(f)
                 validate(instance=file_data, schema=schema)
-                data[filename] = file_data
+                data.append({filename: file_data})
         return data
